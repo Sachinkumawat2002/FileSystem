@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "edd8961d-18e2-4a83-bc02-39bee7860da4",
+		"name": "FileShare System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33524220"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sachin.21bcan159@jecrcu.edu.in",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "is_opsuser",
+							"value": "True",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/customer/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sachin.21bcan159@jecrcu.edu.in",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/customer/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authentication",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJzYWNoaW4uMjFiY2FuMTU5QGplY3JjdS5lZHUuaW4iLCJTYWNoaW4iOiI8ZnVuY3Rpb24gdXVpZDQgYXQgMHgwMDAwMDI0OTgxRkE3NTYwPiJ9.P8Cx8smGCpSvHh5CWkzvC2dWOABjE_gh1VvimM5TIj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lenovo/Downloads/Bold attorney resume.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/customer/upload-file/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"upload-file",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authentication",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqYW5naWRAZ21haWwuY29tIiwiZmlsZXNoYXJlIjoiPGZ1bmN0aW9uIHV1aWQ0IGF0IDB4MDAwMDAxMkUwRjhBNzU2MD4ifQ.8L7WppW48-8JDYn1eYFZ9Pg1GNywAymIGwnewKiqPks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/customer/all-upload-files/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"all-upload-files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authentication",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqYW5naWRAZ21haWwuY29tIiwiZmlsZXNoYXJlIjoiPGZ1bmN0aW9uIHV1aWQ0IGF0IDB4MDAwMDAxMkUwRjhBNzU2MD4ifQ.8L7WppW48-8JDYn1eYFZ9Pg1GNywAymIGwnewKiqPks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/customer/download-file/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"download-file",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
